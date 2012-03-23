@@ -10,7 +10,11 @@ var dashcodePartSpecs = {
     "recess": { "creationFunction": "CreateShape", "leftImageWidth": 5, "rightImageWidth": 5 },
     "recess-left": { "creationFunction": "CreateButton", "leftImageWidth": 5, "rightImageWidth": 2 },
     "recess-right": { "creationFunction": "CreateButton", "leftImageWidth": 2, "rightImageWidth": 5 },
-    "scrollArea": { "autoHideScrollbars": true, "creationFunction": "CreateScrollArea", "hasVerticalScrollbar": true, "scrollbarDivSize": 18, "scrollbarMargin": 6, "spacing": 4 }
+    "rectangleShadow": { "creationFunction": "CreateShape", "noBackground": true },
+    "rectangleShape": { "creationFunction": "CreateShape", "leftImageWidth": 5, "rightImageWidth": 5 },
+    "scrollArea": { "autoHideScrollbars": true, "creationFunction": "CreateScrollArea", "hasVerticalScrollbar": true, "scrollbarDivSize": 18, "scrollbarMargin": 6, "spacing": 4 },
+    "text": { "text": "settings", "view": "DC.Text" }
 };
+
 
 

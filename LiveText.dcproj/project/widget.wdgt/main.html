@@ -11,6 +11,7 @@
     <script type="text/javascript" src="main.js" charset="utf-8"></script>
     <script type="text/javascript" src="Library/fountain.js" charset="utf-8"></script>
     <script type="text/javascript" src="Library/textile.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Library/wiky.js" charset="utf-8"></script>
     <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleScrollbar.js" charset="utf-8"></script>
     <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleScrollArea.js" charset="utf-8"></script>
 </head>
@@ -21,73 +22,13 @@
         <div id="recess-right" apple-part="com.apple.Dashcode.part.roundedrightbutton" class="apple-no-children" apple-style="image-theme: 0; image-shape: 6; image-button-type: 0; image-opacity: 1.00; image-top-color: 0.949999988,0.949999988,0.949999988,1; image-bottom-color: 0.949999988,0.949999988,0.949999988,1; image-radius: -1,5,-1,5; image-border: 1; image-border-color: 0.850000024,0.850000024,0.850000024,1; image-border-width: 1; shine-on: 0; shine-strength: 0.10; shine-alpha-level: 0.10; shine-height: 0.50; glass-arc-height: 0.00; embossed-on: 1; embossed-depth: 2; embossed-shadow: 0.2; embossed-highlight: 0; shadow-include-shadow: 0;"></div>
         <div id="recess-left" apple-part="com.apple.Dashcode.part.roundedleftbutton" class="apple-no-children" apple-style="image-theme: 0; image-shape: 5; image-button-type: 0; image-opacity: 1.00; image-top-color: 0.949999988,0.949999988,0.949999988,1; image-bottom-color: 0.949999988,0.949999988,0.949999988,1; image-radius: 5,-1,5,-1; image-border: 1; image-border-color: 0.850000024,0.850000024,0.850000024,1; image-border-width: 1; shine-on: 0; shine-strength: 0.10; shine-alpha-level: 0.10; shine-height: 0.50; glass-arc-height: 0.00; embossed-on: 1; embossed-depth: 2; embossed-shadow: 0.2; embossed-highlight: 0; shadow-include-shadow: 0;"></div>
         <textarea id="input" apple-part="com.apple.Dashcode.part.textarea" name="input" onkeyup="updateOutput(event)" onmousemove="updateScroll(event)">input text</textarea>
-        <textarea id="output" apple-part="com.apple.Dashcode.part.textarea" disabled="disabled" name="output">output text
-sdf
-asdf
-asdf
-asdf
-sadf
-fsd
-dsf
-dgf
-ghj
-gkhl
-ku
-fjhf
-bg
-fs
-fsda
-gfhn
-ku
-kuy
-kf
-fdhg
-gr
-efaw
-gs
-dhj
-kiyl
-jyt
-hts
-ags
-grs
-dyjtuykf
-kuf
-rth
-rg
-bfdfngh
-kufy
-yj
-hte
-gr
-dj
-,k
-uyjry
-th
-gn
-djy
-tuk
-ktu
-fh
-gr
-
-,jhgk
-yliliyt
-jyrsth
-grwETSRJYKDTUYLI
-YKUJ
-HTATJRY
-KEUT,
-M
-As
-dhm
-ng
-yjej
-m
-j,gf
-dutk</textarea>
         <div id="scrollArea" apple-part="com.apple.Dashcode.part.scrollarea" apple-group="scrollArea">
             <div id="content" class="content" apple-group="scrollArea" style="position: absolute; left: 0px; top: 0px; right: 22px; bottom: 0px; overflow-x: hidden; overflow-y: hidden; "></div></div>
+        <div id="box" apple-part="com.apple.Dashcode.part.box" onmouseover="settingsOver(event)" onmouseout="settingsOut(event)">
+            <div id="rectangleShadow" apple-part="com.apple.Dashcode.part.roundedrectangleshape" class="apple-no-children" apple-style="image-theme: 3; image-shape: 3; image-button-type: 3; image-opacity: 1.00; image-top-color: 0.949999988,0.949999988,0.949999988,1; image-bottom-color: 0.75,0.75,0.75,1; image-radius: 0,0,0,0; image-border: 0; image-border-color: 0.850000024,0.850000024,0.850000024,1; image-border-width: 1; shine-on: 0; shine-strength: 0.80; shine-alpha-level: 0.10; shine-height: 0.80; glass-arc-height: 0.00; embossed-on: 0; embossed-depth: 1; embossed-shadow: 0.68; embossed-highlight: 0.3; shadow-include-shadow: 0;"></div>
+            <div id="rectangleShape" apple-part="com.apple.Dashcode.part.roundedrectangleshape" class="apple-no-children" apple-style="image-theme: 1; image-shape: 3; image-button-type: 3; image-opacity: 1.00; image-top-color: 0.949999988,0.949999988,0.949999988,1; image-bottom-color: 0.75,0.75,0.75,1; image-radius: 5,5,5,5; image-border: 1; image-border-color: 0.850000024,0.850000024,0.850000024,1; image-border-width: 1; shine-on: 1; shine-strength: 0.80; shine-alpha-level: 0.10; shine-height: 0.80; glass-arc-height: 0.00; embossed-on: 0; embossed-depth: 1; embossed-shadow: 0.68; embossed-highlight: 0.3; shadow-include-shadow: 0;"></div>
+            <div id="text" apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" apple-style="part-height-dependent: true;part-width-dependent: true;"></div>
+        </div>
         <div class="apple-no-children" id="info" apple-part="com.apple.Dashcode.part.infobutton" apple-default-image-visibility="hidden"></div>
     </div>
     <div id="back">

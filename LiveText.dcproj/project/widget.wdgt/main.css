@@ -124,22 +124,6 @@ body {
     font-size: 12px;
 }
 
-#output {
-    color: black;
-    font-family: HelveticaNeue;
-    font-size: 10pt;
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0);
-    border-color: rgba(0, 0, 0, 0);
-    top: 22px;
-    margin-bottom: auto;
-    width: 270px;
-    height: 350px;
-    right: 22px;
-    margin-left: auto;
-    visibility: hidden;
-}
-
 #scrollArea {
     color: black;
     font-family: HelveticaNeue;
@@ -156,4 +140,59 @@ body {
 
 #content {
     font-size: 12px;
+}
+
+#box {
+    border-color: black;
+    border-width: 1px;
+    position: absolute;
+    margin-top: 0px;
+    top: 140px;
+    width: 240px;
+    height: 120px;
+    left: 320px;
+    visibility: hidden;
+}
+
+#rectangleShape {
+    position: absolute;
+    -khtml-margin-top-collapse: separate;
+    -khtml-margin-bottom-collapse: separate;
+    margin-top: 0px;
+    height: auto;
+    width: auto;
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+}
+
+#text {
+    font-size: 13px;
+    font-family: 'Lucida Grande', Arial, sans-serif;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    left: 94px;
+    top: 27px;
+    width: auto;
+    height: auto;
+}
+
+.selected #text {
+    color: white;
+}
+
+#rectangleShadow {
+    position: absolute;
+    margin-top: 0px;
+    -webkit-box-shadow: rgb(0, 0, 0) 0px 5px 20px 0px;
+    box-shadow: rgb(0, 0, 0) 0px 5px 20px 0px;
+    width: auto;
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    height: auto;
+    bottom: 25px;
 }

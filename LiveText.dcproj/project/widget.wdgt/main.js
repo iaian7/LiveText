@@ -165,9 +165,11 @@ function updateType(event) {
 // Output Functions
 
 function updateOutput(event) {
-//	document.getElementById("output").value = convert_textile(document.getElementById("input").value);
-	document.getElementById("content").innerHTML = convert_textile(document.getElementById("input").value);
+//	document.getElementById("content").innerHTML = convert_textile(document.getElementById("input").value);
+	document.getElementById("content").innerHTML = wiky.process(document.getElementById("input").value);
 }
+
+
 
 function updateScroll() {
 //	alert("scrollHeight: "+document.getElementById("input").scrollHeight);
@@ -189,6 +191,35 @@ function updateScroll() {
 	scrollArea.verticalScrollTo(scroll);
 }
 
+
+
+// CurrentView animations
+
+function hideSettings(event) {
+	document.getElementById("settings").object.setCurrentView("hidden", false, true);
+}
+
+function showSettings(event) {
+	document.getElementById("settings").object.setCurrentView("shown", true, true);
+}
+
+
+
+// Element animations
+
+function settingsOver(event) {
+	var item = event.target;
+	item = document.getElementById("box");
+	var fadeHandler = function(a, c, s, f){ item.style.opacity = c; };
+	new AppleAnimator(200, 5, 0.0, 1.0, fadeHandler).start();
+}
+
+function settingsOut(event) {
+	var item = event.target;
+	item = document.getElementById("box");
+	var fadeHandler = function(a, c, s, f){ item.style.opacity = c; };
+	new AppleAnimator(400, 10, 1.0, 0.0, fadeHandler).start();
+}
 
 
 

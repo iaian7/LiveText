@@ -92,12 +92,32 @@
 				<integer>0</integer>
 				<integer>6</integer>
 			</array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>5</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>5</integer>
+				<integer>0</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>6</integer>
+				<integer>1</integer>
+			</array>
 		</array>
 		<key>Objects view last selections</key>
 		<array/>
 		<key>Visible StackLayout Views</key>
 		<array>
+			<string>shown</string>
+			<string>view2</string>
 			<string>front</string>
+			<string>view1</string>
 		</array>
 	</dict>
 </dict>
